@@ -1,0 +1,12 @@
+---
+instances: 1
+memory: 1G
+buildpack: java_buildpack_offline
+applications:
+  - name: restaurant-takeout
+    host: restaurant-takeout
+    services:
+      - config-server
+    env:
+      SPRING_PROFILES_ACTIVE: cloud
+    path: target/restaurant-takeout-0.0.1-SNAPSHOT.jar
