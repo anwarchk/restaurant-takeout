@@ -29,7 +29,6 @@ public class RestaurantTakeOutApplication {
         @Value("${chef.special:Meh, I dont' like the special anyway}")
         private String special;
 
-
         @GetMapping("/name")
         public String getRestaurantName() {
             return name;
